@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://degree53gaming.com/sitemap.xml

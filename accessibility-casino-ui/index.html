@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility in Casino and Slot UI: A Practical Checklist</title>
+<meta name="description" content="Casino interfaces are built from spinning, flashing, low-contrast things. A practical note on applying contrast, reduced motion, touch-target and screen-reader basics to lobbies and game clients without killing the art.">
+<link rel="canonical" href="https://degree53gaming.com/accessibility-casino-ui/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Game UX Notes">
+<meta property="og:title" content="Accessibility in Casino and Slot UI: A Practical Checklist">
+<meta property="og:description" content="Casino interfaces are built from spinning, flashing, low-contrast things. A practical note on applying contrast, reduced motion, touch-target and screen-reader basics to lobbies and game clients without killing the art.">
+<meta property="og:url" content="https://degree53gaming.com/accessibility-casino-ui/">
+<meta property="og:image" content="https://degree53gaming.com/img/accessibility-touch-targets.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;rect width=&quot;32&quot; height=&quot;32&quot; rx=&quot;6&quot; fill=&quot;%232b2d31&quot;/&gt;&lt;text x=&quot;16&quot; y=&quot;22&quot; text-anchor=&quot;middle&quot; font-family=&quot;Georgia,serif&quot; font-size=&quot;18&quot; fill=&quot;%23f4f1ea&quot;&gt;U&lt;/text&gt;&lt;/svg&gt;">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Accessibility in casino UI: contrast, motion, one-handed play and reading order", "description": "Casino interfaces are built from spinning, flashing, low-contrast things. A practical note on applying contrast, reduced motion, touch-target and screen-reader basics to lobbies and game clients without killing the art.", "author": {"@type": "Person", "name": "Rory Finch"}, "publisher": {"@type": "Organization", "name": "Game UX Notes"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "mainEntityOfPage": "https://degree53gaming.com/accessibility-casino-ui/", "inLanguage": "en-GB", "image": "https://degree53gaming.com/img/accessibility-touch-targets.webp"}</script>
+</head>
+<body class="uxn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="/">Game UX Notes</a><nav aria-label="Main"><a href="/">Notes</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></div></header>
+<main id="main" class="wrap"><article class="page">
+<h1>Accessibility in casino UI: contrast, motion, one-handed play and reading order</h1><figure class="lead-img"><img src="/img/accessibility-touch-targets.webp" alt="A thumb-reach arc over large round buttons on a phone — one-handed, accessible controls" width="1536" height="1024" loading="eager" decoding="async"></figure>
+<p><strong>A slot is, by design, a screen full of motion, colour and small text — nearly every accessibility failure mode in one product.</strong> That is not a reason to give up on accessibility; it is a reason to be specific about which parts of the experience must work for everyone and which parts are the art.</p>
+<p><em>Last reviewed: 21 September 2026 · Author: Rory Finch</em></p>
+<h2>Separate the frame from the game</h2>
+<p>The most useful distinction in casino accessibility is between the <strong>frame</strong> — lobby, bet panel, balance, info screens, deposit and withdrawal flows, responsible-gambling tools — and the <strong>game surface</strong>, the reels and animations themselves. The frame is a normal web interface and there is no excuse for it to fail basic standards. The game surface has genuine constraints, but far fewer than teams assume.</p>
+<p>Everything a player <em>must</em> be able to do — read their balance, change the stake, stop, set a limit, withdraw, find help — lives in the frame. Start there.</p>
+<h2>The frame: a checklist that fits on one screen</h2>
+<ul>
+<li><strong>Text contrast</strong> of at least 4.5:1 for body text and 3:1 for large text (WCAG 2.x AA). Balances and stakes rendered in thin gold on dark blue routinely fail this; it is the first thing to fix because it is the money.</li>
+<li><strong>Touch targets</strong> of at least 44×44 points for stake +/- buttons, spin, and the responsible-gambling controls. Tiny stake steppers cause mis-taps that cost real money.</li>
+<li><strong>Focus order and labels.</strong> Every control reachable by keyboard and named for screen readers: "Increase stake to £2", not "button".</li>
+<li><strong>One-handed reach.</strong> The spin control, stake and balance within thumb reach on a phone held in one hand; the menu can live at the top.</li>
+<li><strong>Reduced motion respected</strong> for the frame: no parallax in the lobby, no pulsing promotion cards when the system setting asks for less motion.</li>
+<li><strong>Live regions</strong> for balance changes so that a screen reader announces "balance £48.20" after a spin without the player hunting for it.</li>
+</ul>
+<p>None of this touches the art.</p>
+<h2>The game surface: what can reasonably be done</h2>
+<ul>
+<li><strong>Win presentation in text, not only in colour and motion.</strong> "Won £3.20" as a readable line alongside the animation. This also happens to serve the GB rule that a return below the stake must not be celebrated as a win — text is easier to make honest than fireworks. See <a href="/designing-within-rts-14/">designing within RTS 14</a>.</li>
+<li><strong>A reduced-motion mode for the reels</strong>: shorter animations, no screen shake, no strobing on big wins. Strobing above three flashes per second is a seizure risk under WCAG and should not exist in any mode.</li>
+<li><strong>Symbol legibility.</strong> Symbols distinguishable by shape and not only by colour; a paytable that names them.</li>
+<li><strong>Audio independence.</strong> Nothing that matters conveyed only by sound — the mute majority already lives this way, so the design is usually there already.</li>
+</ul>
+<h2>Reading order and the info screen</h2>
+<p>Info screens are frequently images of text exported from the studio's design tool — invisible to screen readers and unscalable. Rules, paytable and the RTP disclosure should be real text. In Great Britain the disclosure is mandatory; an image of it arguably fails the "easily available" test as well as accessibility.</p>
+<h2>Cognitive load is an accessibility issue too</h2>
+<p>The product is used by tired people on small screens who may be anxious about money. Plain language in the bet panel ("Bet £1 per spin", not "Stake 1.00 · Lines 20 · Coin 0.05"), a visible net position, and limit-setting that is not hidden under three menus are accessibility features by any sensible definition — and in GB the net-position display is also a rule.</p>
+<h2>What to test with</h2>
+<p>Real devices with the system accessibility settings on: larger text, reduced motion, a screen reader, and one-handed use. Fifteen minutes of that on the deposit flow finds more than an hour of automated scanning.</p>
+<h2>Quick answers</h2>
+<p><strong>Will accessibility make the game look worse?</strong> The frame will look better; clarity generally does. The game surface keeps its art and gains a reduced-motion option that many non-disabled players will also switch on.</p>
+<p><strong>Is there a legal requirement?</strong> There is no gambling-specific accessibility standard. The Equality Act 2010's duty on service providers to make reasonable adjustments applies to online services in general, and in Great Britain the mandatory game information has to be readable to count as "easily available" under RTS 3.</p>
+<p><strong>Where to start?</strong> Contrast on money figures, touch targets on stake controls, text alternatives for wins. One sprint.</p>
+<hr />
+<p><em>Standards referenced: WCAG 2.x success criteria for contrast, target size, motion and flashing. Figures such as 4.5:1 and 44×44 are the standard's values; everything else is practice.</em></p>
+</article></main>
+<footer class="foot"><div class="wrap">
+<p class="rg">18+ · If gambling has stopped being fun: National Gambling Helpline 0808 8020 133 (free, 24/7) · <a href="https://www.gambleaware.org/">gambleaware.org</a> · <a href="https://www.gamstop.co.uk/">gamstop.co.uk</a></p>
+<p class="small">Personal site. No affiliate links. Not affiliated with any operator, studio or agency.</p>
+<p class="small"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · © 2026 Game UX Notes</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casino Lobby UX: Why the Filter Bar Beats the Hero</title>
+<meta name="description" content="Most players open a casino lobby already knowing what they want. A UX note on why search, filters and &quot;recently played&quot; deserve the top of the screen — and what the hero banner actually costs.">
+<link rel="canonical" href="https://degree53gaming.com/casino-lobby-ux/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Game UX Notes">
+<meta property="og:title" content="Casino Lobby UX: Why the Filter Bar Beats the Hero">
+<meta property="og:description" content="Most players open a casino lobby already knowing what they want. A UX note on why search, filters and &quot;recently played&quot; deserve the top of the screen — and what the hero banner actually costs.">
+<meta property="og:url" content="https://degree53gaming.com/casino-lobby-ux/">
+<meta property="og:image" content="https://degree53gaming.com/img/casino-lobby-filter-bar.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;rect width=&quot;32&quot; height=&quot;32&quot; rx=&quot;6&quot; fill=&quot;%232b2d31&quot;/&gt;&lt;text x=&quot;16&quot; y=&quot;22&quot; text-anchor=&quot;middle&quot; font-family=&quot;Georgia,serif&quot; font-size=&quot;18&quot; fill=&quot;%23f4f1ea&quot;&gt;U&lt;/text&gt;&lt;/svg&gt;">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Casino lobby UX: the filter bar does more work than the hero", "description": "Most players open a casino lobby already knowing what they want. A UX note on why search, filters and \"recently played\" deserve the top of the screen — and what the hero banner actually costs.", "author": {"@type": "Person", "name": "Rory Finch"}, "publisher": {"@type": "Organization", "name": "Game UX Notes"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "mainEntityOfPage": "https://degree53gaming.com/casino-lobby-ux/", "inLanguage": "en-GB", "image": "https://degree53gaming.com/img/casino-lobby-filter-bar.webp"}</script>
+</head>
+<body class="uxn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="/">Game UX Notes</a><nav aria-label="Main"><a href="/">Notes</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></div></header>
+<main id="main" class="wrap"><article class="page">
+<h1>Casino lobby UX: the filter bar does more work than the hero</h1><figure class="lead-img"><img src="/img/casino-lobby-filter-bar.webp" alt="A filter bar of chips above a grid of tiles — lobby navigation ahead of the banner" width="1536" height="1024" loading="eager" decoding="async"></figure>
+<p><strong>A casino lobby is not a shop window; it is a launcher.</strong> Most people who open it already know which game they want, or at least which kind. The lobby's job is to get them there in one or two taps — and the thing that does that job is the filter bar, not the hero.</p>
+<p><em>Last reviewed: 21 September 2026 · Author: Rory Finch</em></p>
+<h2>Who actually arrives at a lobby</h2>
+<p>Session recordings from lobby projects I have worked on tend to sort visitors into three groups, in roughly this order of size (proportions vary by brand; treat the shape, not the numbers, as the point):</p>
+<ol>
+<li><strong>Returners with a game in mind.</strong> They want the game they played yesterday. Their ideal lobby is a "recently played" row at the top and nothing in the way.</li>
+<li><strong>Browsers with a category in mind.</strong> "A Megaways game", "something with a bonus buy", "live blackjack". Their ideal lobby is a filter bar that maps to how they think — mechanic, feature, studio, stake range — not to how the catalogue is stored.</li>
+<li><strong>Genuine explorers.</strong> They will scroll, and they will use the hero. They are the smallest group, and the hero is designed for them at everyone else's expense.</li>
+</ol>
+<p>The hero banner is also where the promotion lives, which is why it survives every redesign. But a promotion that pushes "recently played" below the fold is charging the largest group of players a scroll on every visit to reach the smallest.</p>
+<h2>What a good filter bar does</h2>
+<ul>
+<li><strong>Speaks the player's language.</strong> "Bonus buy", "high volatility", "jackpots", "new", "live" — not "Category 4". Mechanic filters (Megaways, cluster pays, hold-and-win) belong here on any catalogue over a few hundred games.</li>
+<li><strong>Shows counts.</strong> "High volatility (212)" tells the player the filter is worth tapping. An empty result set is a broken promise, so filters that would return zero should be hidden or disabled, not shown.</li>
+<li><strong>Stacks.</strong> Studio + feature + volatility is a common real query. Single-select filters force the player back to search.</li>
+<li><strong>Stays put.</strong> A sticky bar on scroll costs 48 pixels and saves a scroll-to-top on every change of mind.</li>
+<li><strong>Remembers.</strong> The last filter set is a better default for the next visit than "All games".</li>
+</ul>
+<h2>Search is a filter with a keyboard</h2>
+<p>On catalogues of a thousand games, search is the primary navigation for returners who have not played recently enough to be in the top row. Three things make or break it:</p>
+<ul>
+<li><strong>Prefix and typo tolerance.</strong> "gates" must find <em>Gates of Olympus</em>; "big bas" must find every Big Bass game.</li>
+<li><strong>Results as you type,</strong> with the tile and the studio name — a text list is a step backwards.</li>
+<li><strong>Studio search.</strong> Many players remember the studio and not the title.</li>
+</ul>
+<h2>Tiles: the unit of the lobby</h2>
+<p>The tile is where art and information collide. What belongs on it: the game's art, its name on hover or focus, and — for the browsers — one or two badges (new, jackpot, live). What does not belong on it: RTP, volatility, and paylines. That information is mandatory in the game's info screen, and putting it on every tile turns the lobby into a spreadsheet. A single "info" affordance per tile is the compromise that works.</p>
+<p>Tile size is a mobile decision. Two columns fit a name and a badge; three columns are a wall of art where nothing can be read. Most lobbies choose three for density; the ones that test it usually go back to two, with a denser "compact" toggle for the players who want it.</p>
+<h2>Where the promotion should go</h2>
+<p>Between the "recently played" row and the first category row. It is still above the fold on most phones, it is seen by all three groups, and it no longer taxes the returners. Brands that insist on the hero at the very top should at least make "recently played" the first thing beneath it and cap the hero at one screen-third.</p>
+<h2>A one-screen checklist</h2>
+<ul>
+<li>Recently played is visible without scrolling.</li>
+<li>The filter bar uses player vocabulary and shows counts.</li>
+<li>Search finds games by prefix, typo and studio.</li>
+<li>Tiles show art and a name; details are one tap away, not on the tile.</li>
+<li>The promotion is present and does not push the first two points down.</li>
+</ul>
+<p>If a lobby passes those five, the hero can be as beautiful as the marketing team likes.</p>
+<hr />
+<p><em>The proportions and pixel figures above are illustrative, drawn from project experience rather than a published study.</em></p>
+</article></main>
+<footer class="foot"><div class="wrap">
+<p class="rg">18+ · If gambling has stopped being fun: National Gambling Helpline 0808 8020 133 (free, 24/7) · <a href="https://www.gambleaware.org/">gambleaware.org</a> · <a href="https://www.gamstop.co.uk/">gamstop.co.uk</a></p>
+<p class="small">Personal site. No affiliate links. Not affiliated with any operator, studio or agency.</p>
+<p class="small"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · © 2026 Game UX Notes</p>
+</div></footer>
+</body>
+</html>

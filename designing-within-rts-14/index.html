@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing Slots Within RTS 14: Pace, Feedback and Honest Wins</title>
+<meta name="description" content="Great Britain&#x27;s slot design rules fix a 2.5-second minimum spin, ban turbo and slam stop, and forbid celebrating a return below the stake. A design note on what that does to animation budgets, feedback and the feel of a game.">
+<link rel="canonical" href="https://degree53gaming.com/designing-within-rts-14/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Game UX Notes">
+<meta property="og:title" content="Designing Slots Within RTS 14: Pace, Feedback and Honest Wins">
+<meta property="og:description" content="Great Britain&#x27;s slot design rules fix a 2.5-second minimum spin, ban turbo and slam stop, and forbid celebrating a return below the stake. A design note on what that does to animation budgets, feedback and the feel of a game.">
+<meta property="og:url" content="https://degree53gaming.com/designing-within-rts-14/">
+<meta property="og:image" content="https://degree53gaming.com/img/rts-14-spin-ring.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;rect width=&quot;32&quot; height=&quot;32&quot; rx=&quot;6&quot; fill=&quot;%232b2d31&quot;/&gt;&lt;text x=&quot;16&quot; y=&quot;22&quot; text-anchor=&quot;middle&quot; font-family=&quot;Georgia,serif&quot; font-size=&quot;18&quot; fill=&quot;%23f4f1ea&quot;&gt;U&lt;/text&gt;&lt;/svg&gt;">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Designing within RTS 14: what a 2.5-second floor does to a slot's feel", "description": "Great Britain's slot design rules fix a 2.5-second minimum spin, ban turbo and slam stop, and forbid celebrating a return below the stake. A design note on what that does to animation budgets, feedback and the feel of a game.", "author": {"@type": "Person", "name": "Rory Finch"}, "publisher": {"@type": "Organization", "name": "Game UX Notes"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "mainEntityOfPage": "https://degree53gaming.com/designing-within-rts-14/", "inLanguage": "en-GB", "image": "https://degree53gaming.com/img/rts-14-spin-ring.webp"}</script>
+</head>
+<body class="uxn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="/">Game UX Notes</a><nav aria-label="Main"><a href="/">Notes</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></div></header>
+<main id="main" class="wrap"><article class="page">
+<h1>Designing within RTS 14: what a 2.5-second floor does to a slot's feel</h1><figure class="lead-img"><img src="/img/rts-14-spin-ring.webp" alt="A spin button with a progress ring in front of settling reels — the fixed spin cycle" width="1536" height="1024" loading="eager" decoding="async"></figure>
+<p><strong>For a GB-licensed slot, the spin cycle cannot be shorter than 2.5 seconds, the player cannot speed it up, and the game may not celebrate a return that is smaller than the stake.</strong> Those are rules from the Gambling Commission's RTS 14. What follows is not a summary of the rules — that exists elsewhere — but what they do to the craft of designing a game that still feels good.</p>
+<p><em>Last reviewed: 21 September 2026 · Author: Rory Finch</em></p>
+<h2>The pace budget</h2>
+<p>Before the 2021 rules, a slot's pace was a dial: base speed, quick spin, turbo, slam stop. The player chose; the studio designed for the fastest setting and let the rest follow. RTS 14D and 14E remove the dial. 2.5 seconds is now the whole budget, for every spin, for every player.</p>
+<p>Designers tend to react in one of two ways. The first is to pad: a 1.2-second spin followed by 1.3 seconds of nothing, so the game feels like it is waiting for permission. The second is to <em>use</em> the time: reels that settle with weight, anticipation on the last reel when a scatter is live, a beat for the win line to be read. Same 2.5 seconds; one feels like a delay, the other feels like a game.</p>
+<p>The practical rule is that nothing in the cycle should read as idle. If the reels stop at 1.5 seconds, the remaining second belongs to the result — a count-up, a symbol highlight, a line trace — not to a frozen frame.</p>
+<h2>Anticipation without acceleration</h2>
+<p>The features that made pre-2021 slots exciting mostly involved speed: fast reels, faster re-spins, a turbo button for the hundred dry spins between bonuses. Without acceleration, excitement has to come from <em>variation within the fixed cycle</em>: a slow-stop on the final reel only when it matters, a different settle sound for a near-miss, a change in lighting when a bonus is one symbol away. These cost animation budget, not time — the time is fixed either way.</p>
+<p>Multi-game play is gone too (RTS 14C), which removes the other way players used to fill dry runs. The game on screen has to hold attention alone, and the honest way to do that is a base game that is interesting to watch, not a longer list of features.</p>
+<h2>Honest feedback: the loss-disguised-as-win rule</h2>
+<p>RTS 14F forbids celebrating a return less than or equal to the stake. On a low-volatility game, a large share of "wins" fall into that band. The rule does not ban showing them; it bans the fanfare.</p>
+<p>Design implications:</p>
+<ul>
+<li><strong>Two tiers of win presentation</strong>, not one. Below the stake: the amount, a soft highlight, no sound spike, no coin shower. Above the stake: the celebration, scaled to the multiple.</li>
+<li><strong>A text line for every result.</strong> "Returned £0.40 on a £1 spin" is honest, readable and compliant; a flashing "WIN" over the same figure is none of those.</li>
+<li><strong>Net position, always visible.</strong> The session's running total (a requirement of the same 2021 package) is the antidote to the illusion of winning while losing, and designers should treat it as a feature to be read, not a compliance element to be shrunk.</li>
+</ul>
+<p>The interesting discovery on projects that took this seriously is that players did not miss the fake fanfare. What they noticed was that big wins felt bigger, because the celebration had stopped being cheap.</p>
+<h2>Autoplay is gone; what replaces it</h2>
+<p>With autoplay removed, every spin is a tap. That makes the spin control the most-used element in the product, and its design matters more than the art: within thumb reach, large enough not to be missed, with a clear disabled state during the cycle so that a second tap does not feel ignored. Some studios show a subtle ring that fills over the 2.5 seconds; it turns the mandatory wait into visible progress and quietly explains why the tap did nothing.</p>
+<h2>The separate build question</h2>
+<p>Because these rules apply to GB and not everywhere, most studios maintain a jurisdiction switch in the client. The temptation is to build for the fast markets and "slow down" for GB by inserting waits. The better products are designed at the GB pace first and <em>accelerated</em> elsewhere, because a game whose feedback is designed to fill 2.5 seconds is coherent at that pace, while a fast game with waits inserted is not.</p>
+<h2>Quick answers</h2>
+<p><strong>Can the reels visibly stop early if the cycle still lasts 2.5 seconds?</strong> Yes; the rule is on the cycle, not the animation. Use the remainder for the result.</p>
+<p><strong>How should free spins handle the loss-disguised-as-win rule?</strong> A free spin has no stake of its own, so the honest design choice is to compare each return with the stake of the spin that triggered the feature and present anything below it the quiet way. The standard's text is the reference; this is the reading that keeps the feedback consistent.</p>
+<p><strong>Is 2.5 seconds slow?</strong> It is 24 spins a minute. It only feels slow to a game that has nothing to show during it.</p>
+<hr />
+<p><em>Source for the rules: Gambling Commission, <a href="https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-14-responsible-product-design">RTS 14: responsible product design</a>. Design observations are from project work, not a published study.</em></p>
+</article></main>
+<footer class="foot"><div class="wrap">
+<p class="rg">18+ · If gambling has stopped being fun: National Gambling Helpline 0808 8020 133 (free, 24/7) · <a href="https://www.gambleaware.org/">gambleaware.org</a> · <a href="https://www.gamstop.co.uk/">gamstop.co.uk</a></p>
+<p class="small">Personal site. No affiliate links. Not affiliated with any operator, studio or agency.</p>
+<p class="small"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · © 2026 Game UX Notes</p>
+</div></footer>
+</body>
+</html>

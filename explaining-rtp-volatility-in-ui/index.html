@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explaining RTP and Volatility in Game UI Without a Lecture</title>
+<meta name="description" content="Regulators require the RTP to be shown; nobody requires it to be understood. A UX note on where the number should live, how to present volatility as a feeling rather than a statistic, and what not to do.">
+<link rel="canonical" href="https://degree53gaming.com/explaining-rtp-volatility-in-ui/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Game UX Notes">
+<meta property="og:title" content="Explaining RTP and Volatility in Game UI Without a Lecture">
+<meta property="og:description" content="Regulators require the RTP to be shown; nobody requires it to be understood. A UX note on where the number should live, how to present volatility as a feeling rather than a statistic, and what not to do.">
+<meta property="og:url" content="https://degree53gaming.com/explaining-rtp-volatility-in-ui/">
+<meta property="og:image" content="https://degree53gaming.com/img/rtp-info-panel.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;rect width=&quot;32&quot; height=&quot;32&quot; rx=&quot;6&quot; fill=&quot;%232b2d31&quot;/&gt;&lt;text x=&quot;16&quot; y=&quot;22&quot; text-anchor=&quot;middle&quot; font-family=&quot;Georgia,serif&quot; font-size=&quot;18&quot; fill=&quot;%23f4f1ea&quot;&gt;U&lt;/text&gt;&lt;/svg&gt;">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Explaining RTP and volatility inside the UI without a lecture", "description": "Regulators require the RTP to be shown; nobody requires it to be understood. A UX note on where the number should live, how to present volatility as a feeling rather than a statistic, and what not to do.", "author": {"@type": "Person", "name": "Rory Finch"}, "publisher": {"@type": "Organization", "name": "Game UX Notes"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "mainEntityOfPage": "https://degree53gaming.com/explaining-rtp-volatility-in-ui/", "inLanguage": "en-GB", "image": "https://degree53gaming.com/img/rtp-info-panel.webp"}</script>
+</head>
+<body class="uxn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="/">Game UX Notes</a><nav aria-label="Main"><a href="/">Notes</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></div></header>
+<main id="main" class="wrap"><article class="page">
+<h1>Explaining RTP and volatility inside the UI without a lecture</h1><figure class="lead-img"><img src="/img/rtp-info-panel.webp" alt="A simple info card with a five-step scale in front of blurred reels — explaining volatility in the interface" width="1536" height="1024" loading="eager" decoding="async"></figure>
+<p><strong>The RTP has to be in the game — in Great Britain that is a technical standard, not a courtesy — but nothing requires it to be understood, and most implementations make sure it is not.</strong> "RTP 96.21%" in a help screen, three menus deep, in the same type size as the copyright line, satisfies the rule and teaches nothing.</p>
+<p><em>Last reviewed: 21 September 2026 · Author: Rory Finch</em></p>
+<h2>What the rule asks for, and what the player needs</h2>
+<p>The Gambling Commission's RTS 3C requires that, before committing to gamble, a customer has "information that may reasonably be expected to enable the customer to make an informed decision about his or her chances of winning" — for slots, the return-to-player percentage. The requirement is about <em>availability</em>. The player's need is different: they want to know whether this game is going to feel stingy or generous, and how long their money is likely to last. The number answers a question they are not asking.</p>
+<p>The design task is to present the mandatory fact in a way that also answers the real question.</p>
+<h2>Where the number should live</h2>
+<ul>
+<li><strong>In the info screen, prominently.</strong> A single "How this game pays" panel: RTP, volatility, hit frequency if the studio publishes it, and the maximum win. One screen, big type, no scrolling.</li>
+<li><strong>One tap from the reels.</strong> An "i" in the frame, not a hamburger-menu-then-rules-then-scroll journey.</li>
+<li><strong>On the bet panel, quietly.</strong> A small "RTP 96.2%" next to the stake selector costs nothing and is where a player is looking when they decide how much to risk.</li>
+</ul>
+<p>What should not happen: the number appearing only in a PDF of the rules, or only in the lobby's tile detail and not in the game.</p>
+<h2>Turning volatility into something felt</h2>
+<p>Volatility is a distribution. Players do not think in distributions; they think in stories — "it goes quiet for ages then pays big" or "it dribbles". The UI can tell that story with three devices, none of which needs a statistics lesson:</p>
+<ol>
+<li><strong>A labelled scale with a sentence.</strong> Not just "High", but "High — long gaps between wins, bigger bonus payouts". The sentence is the explanation; the label is the anchor.</li>
+<li><strong>A contrast, not a lecture.</strong> "Compared with a low-volatility game, expect fewer wins and larger ones." One line, and the player has the concept.</li>
+<li><strong>A bonus frequency, where the studio publishes one.</strong> "Bonus roughly 1 in 200 spins" is the single most useful number for setting expectations, and it is almost never surfaced.</li>
+</ol>
+<p>Review sites have started doing some of this work outside the game.  The better ones put the RTP range and a plain-language volatility line above the fold, ahead of the screenshots — which is exactly where a game's own info screen should put them.</p>
+<h2>What not to do</h2>
+<ul>
+<li><strong>Do not show RTP as a progress bar or a star rating.</strong> A 96% bar looks "nearly full", which reads as "nearly always pays". It does not.</li>
+<li><strong>Do not hide the version.</strong> If the game ships in several RTP configurations, the info screen must show the one running here, and it should say so: "This version: 94.0%". Players who read a review quoting 96.5% and find 94.0% in-game are right to feel misled.</li>
+<li><strong>Do not decorate the number.</strong> Fireworks around "96%" turn a disclosure into a claim.</li>
+<li><strong>Do not explain "return to player" as "how much you win".</strong> It is a long-run average across all players. "Over millions of spins, the game returns about 96p of every £1 staked" is accurate and short.</li>
+</ul>
+<h2>A worked info panel</h2>
+<blockquote>
+<p><strong>How this game pays</strong>
+Return to player: <strong>96.2%</strong> (this version). Over a very large number of spins the game returns about 96p of every £1 staked. Any single session can be far above or below this.
+Volatility: <strong>High</strong> — long gaps between wins; most of the value is in the bonus round.
+Bonus round: roughly <strong>1 in 180 spins</strong> on average.
+Maximum win: <strong>10,000× stake</strong>, extremely rare.</p>
+</blockquote>
+<p>Five lines. Everything the rule requires, and the story a player actually needs. The figures are placeholders; the shape is the point.</p>
+<h2>Quick answers</h2>
+<p><strong>Should the panel show hit frequency?</strong> If the studio publishes it, yes, with a sentence: "About 1 in 4 spins pays something — often less than the stake."</p>
+<p><strong>Does explaining volatility reduce play?</strong> In my experience it reduces <em>complaints</em>, and it moves players toward games that suit them. Both are good outcomes for a product that intends to be used for years.</p>
+<p><strong>Is any of this required?</strong> Only the RTP disclosure. The rest is what a product does when it respects the person using it.</p>
+<hr />
+<p><em>Source for the rule: Gambling Commission, <a href="https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-3-rules-game-descriptions-and-the-likelihood-of-winning">RTS 3: rules, game descriptions and the likelihood of winning</a>. Panel figures are illustrative.</em></p>
+</article></main>
+<footer class="foot"><div class="wrap">
+<p class="rg">18+ · If gambling has stopped being fun: National Gambling Helpline 0808 8020 133 (free, 24/7) · <a href="https://www.gambleaware.org/">gambleaware.org</a> · <a href="https://www.gamstop.co.uk/">gamstop.co.uk</a></p>
+<p class="small">Personal site. No affiliate links. Not affiliated with any operator, studio or agency.</p>
+<p class="small"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · © 2026 Game UX Notes</p>
+</div></footer>
+</body>
+</html>

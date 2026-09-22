@@ -1,0 +1,24 @@
+:root{--graphite:#2b2d31;--ink:#25272b;--warm:#e8e4dc;--bg:#f6f4f0;--sage:#7d9b76;--sage-d:#5e7d58;--muted:#6b6e75;--rule:#dcd7cf}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body.uxn{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:0;background:var(--graphite);color:#fff;padding:8px 12px}.skip:focus{left:8px;top:8px;z-index:9}
+.top{background:var(--bg);border-bottom:1px solid var(--rule)}.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding:20px 20px}
+.brand{color:var(--graphite);text-decoration:none;font-weight:800;letter-spacing:-.01em;font-size:1.1rem}
+.top nav a{color:var(--graphite);text-decoration:none;margin-left:18px;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+.top nav a:hover,.top nav a[aria-current]{border-bottom-color:var(--sage)}
+main.wrap{padding:40px 20px 60px}
+.page h1{font-size:2rem;line-height:1.18;letter-spacing:-.015em;margin:0 0 18px;color:var(--graphite);font-weight:800}
+.page h2{font-size:1.32rem;margin:36px 0 12px;color:var(--graphite);letter-spacing:-.01em}.page h3{font-size:1.08rem;margin:26px 0 8px}
+.page p{margin:0 0 16px}.page li{margin:0 0 8px}.page ul,.page ol{padding-left:24px}
+.page a{color:var(--sage-d);text-decoration-thickness:1px;text-underline-offset:3px}.page a:hover{color:var(--graphite)}
+.lead-img{margin:0 0 28px}.lead-img img{width:100%;height:auto;display:block;border-radius:10px}
+.page em{color:var(--muted)}
+.page table{border-collapse:collapse;width:100%;margin:18px 0 24px;font-size:.93rem}
+.page th,.page td{border:1px solid var(--rule);padding:9px 11px;text-align:left;vertical-align:top}.page th{background:var(--warm);color:var(--graphite)}
+.page blockquote{margin:18px 0;padding:14px 18px;background:#fff;border:1px solid var(--rule);border-left:4px solid var(--sage);border-radius:6px}
+.page hr{border:0;border-top:1px solid var(--rule);margin:34px 0}
+.page code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em;background:var(--warm);padding:1px 5px;border-radius:4px}
+.foot{background:var(--graphite);color:var(--warm);font-size:.9rem}.foot .wrap{padding:28px 20px 36px}
+.foot a{color:#fff}.foot .rg{margin:0 0 10px;font-weight:600}.foot .small{color:#b9b5ad;margin:0 0 8px}
+@media (max-width:600px){body.uxn{font-size:16px}.page h1{font-size:1.55rem}.top nav a{margin-left:12px}}

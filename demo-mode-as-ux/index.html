@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Mode as a UX Feature (and the UK Age-Check Constraint)</title>
+<meta name="description" content="Free play is how people learn a game&#x27;s rhythm before they stake money. Why demo mode belongs in the onboarding flow, how to design the demo-to-real transition, and how Great Britain&#x27;s age-verification rule for demos changes the design.">
+<link rel="canonical" href="https://degree53gaming.com/demo-mode-as-ux/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Game UX Notes">
+<meta property="og:title" content="Demo Mode as a UX Feature (and the UK Age-Check Constraint)">
+<meta property="og:description" content="Free play is how people learn a game&#x27;s rhythm before they stake money. Why demo mode belongs in the onboarding flow, how to design the demo-to-real transition, and how Great Britain&#x27;s age-verification rule for demos changes the design.">
+<meta property="og:url" content="https://degree53gaming.com/demo-mode-as-ux/">
+<meta property="og:image" content="https://degree53gaming.com/img/demo-mode-toggle.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot;&gt;&lt;rect width=&quot;32&quot; height=&quot;32&quot; rx=&quot;6&quot; fill=&quot;%232b2d31&quot;/&gt;&lt;text x=&quot;16&quot; y=&quot;22&quot; text-anchor=&quot;middle&quot; font-family=&quot;Georgia,serif&quot; font-size=&quot;18&quot; fill=&quot;%23f4f1ea&quot;&gt;U&lt;/text&gt;&lt;/svg&gt;">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Demo mode is a UX feature, not a marketing one", "description": "Free play is how people learn a game's rhythm before they stake money. Why demo mode belongs in the onboarding flow, how to design the demo-to-real transition, and how Great Britain's age-verification rule for demos changes the design.", "author": {"@type": "Person", "name": "Rory Finch"}, "publisher": {"@type": "Organization", "name": "Game UX Notes"}, "datePublished": "2026-09-22", "dateModified": "2026-09-22", "mainEntityOfPage": "https://degree53gaming.com/demo-mode-as-ux/", "inLanguage": "en-GB", "image": "https://degree53gaming.com/img/demo-mode-toggle.webp"}</script>
+</head>
+<body class="uxn">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="/">Game UX Notes</a><nav aria-label="Main"><a href="/">Notes</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></div></header>
+<main id="main" class="wrap"><article class="page">
+<h1>Demo mode is a UX feature, not a marketing one</h1><figure class="lead-img"><img src="/img/demo-mode-toggle.webp" alt="A toggle between an outlined and a solid version of the same screen — demo and real play" width="1536" height="1024" loading="eager" decoding="async"></figure>
+<p><strong>Free play is the only way a person can learn how a game feels before they pay for it, and that makes it an onboarding feature, not a promotional one.</strong> Most products treat demo mode as a checkbox — a "Play for fun" link under the tile — and then wonder why first real-money sessions end in confusion.</p>
+<p><em>Last reviewed: 21 September 2026 · Author: Rory Finch</em></p>
+<h2>What a demo teaches that a paytable cannot</h2>
+<p>Reading a paytable tells you what pays. Playing fifty demo spins tells you the <em>rhythm</em>: how often anything happens, how long the dry runs are, what the bonus looks like, whether the cascade mechanic is fun or just slow. Volatility is a feeling before it is a number, and the demo is where the feeling is learned.</p>
+<p>That has a direct product consequence. Players who have demoed a game stake more deliberately, complain less about "rigged" outcomes, and choose games that match their appetite — all of which are good for the player and, over time, for the operator. A demo is a rehearsal, and rehearsals reduce the shock of the performance.</p>
+<h2>The constraint in Great Britain</h2>
+<p>Since 7 May 2019, social responsibility code 3.2.11 has required a GB licensee to verify a customer's age before that customer can access any free-to-play version of a gambling game the licensee offers. The Commission's reasoning was that free-to-play games on an operator's site are "tester products" for the real-money versions. Open demos on the public lobby — the norm in most other markets — are therefore not an option for a GB brand.</p>
+<p>Design teams usually read that as "demos are dead for the UK". It actually means the demo has to move: from the pre-registration lobby into the <em>post-verification</em> experience, where it can do its real job. A verified player who has not yet deposited is the perfect demo audience — they are inside the product, they are curious, and nothing is at stake yet.</p>
+<h2>Where the demo belongs in the flow</h2>
+<ol>
+<li><strong>Directly after verification,</strong> as the default state of any game tile: "Try" first, "Play" second. Money is the upgrade, not the entry point.</li>
+<li><strong>Inside the game client,</strong> as a mode switch, so that a player can flip to demo when a new feature confuses them without leaving the game.</li>
+<li><strong>On every new-release card,</strong> because "new" is precisely when nobody knows the rhythm yet.</li>
+</ol>
+<p>Outside Great Britain, where open demos are allowed, the same logic applies with one addition: demo play on the public site is the best acquisition content a brand has, because it is the product itself.  Catalogues built around free play — demo first, details second — tend to hold visitors far longer than review-style pages, for the obvious reason that they are giving people the thing rather than describing it.</p>
+<h2>Designing the demo-to-real transition</h2>
+<p>The moment a player switches from demo credits to real money is the highest-friction step in the product, and most implementations make it worse:</p>
+<ul>
+<li><strong>Do not reset the game.</strong> If a player has been demoing at £1 a spin with a particular bet configuration, real mode should open with the same configuration, not the default.</li>
+<li><strong>Make the balance change unmistakable.</strong> Demo balances that look like real balances are the source of the "where did my money go" complaints. Different colour, different label, a short banner: "Demo credits — not real money".</li>
+<li><strong>Do not fake the RTP.</strong> Demo mode must run the same maths as real mode. A demo that pays generously and a real game that does not is the fastest way to a "rigged" reputation, and in a regulated market it is a compliance problem, not just a UX one.</li>
+<li><strong>Show the switch cost.</strong> If switching requires a deposit, say so before the tap, not after.</li>
+</ul>
+<h2>What to measure</h2>
+<p>Not "demo sessions" — that number goes up when the tile is bigger and means nothing. Measure: share of first real-money sessions preceded by a demo of the same game; length of first real session with and without a prior demo; and the rate of support contacts about "the game didn't do what I expected" in each group. If the demo is doing its job, the first two go up and the third goes down.</p>
+<h2>Quick answers</h2>
+<p><strong>Should demo spins be limited?</strong> No. A player who wants to spin a demo for an hour is learning; the product loses nothing.</p>
+<p><strong>Should demo mode show the same info screen?</strong> Yes, including RTP and volatility. It is the least stressful moment to read it.</p>
+<p><strong>Is demo mode a responsible-gambling tool?</strong> Partly. It lowers the "I didn't understand the game" category of harm. It does not address the others.</p>
+<hr />
+<p><em>Source for the rule: Gambling Commission, <a href="https://www.gamblingcommission.gov.uk/consultation-response/changes-to-the-licence-conditions-and-codes-of-practice-on-age-and-identity/av-ci-consultation-responses-summary-av-proposed-changes-to-social">changes to the LCCP on age and identity verification — SR code 3.2.11</a> (in force 7 May 2019). Observations on behaviour are from project work and are not a published study.</em></p>
+</article></main>
+<footer class="foot"><div class="wrap">
+<p class="rg">18+ · If gambling has stopped being fun: National Gambling Helpline 0808 8020 133 (free, 24/7) · <a href="https://www.gambleaware.org/">gambleaware.org</a> · <a href="https://www.gamstop.co.uk/">gamstop.co.uk</a></p>
+<p class="small">Personal site. No affiliate links. Not affiliated with any operator, studio or agency.</p>
+<p class="small"><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · © 2026 Game UX Notes</p>
+</div></footer>
+</body>
+</html>
